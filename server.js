@@ -2,7 +2,7 @@ var express         = require('express');
 var app             = express();								// Useful just for routing the files
 
 // Change accordingly to your app folder.
-var staticdir = process.env.NODE_ENV === 'production' ? 'dist.prod' : 'dist.dev';
+var staticdir = process.env.NODE_ENV === 'production' ? './' : './';
 var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/' + staticdir));
 
